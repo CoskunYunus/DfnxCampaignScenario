@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\DfnxCampaignScenario.Core\DfnxCampaignScenario.Core.csproj" />
+    <ProjectReference Include="..\DfnxCampaignScenario.CatalogService.Adaptor\DfnxCampaignScenario.CatalogService.Adaptor.csproj" />
+    <ProjectReference Include="..\DfnxCampaignScenario.CatalogService.Model\DfnxCampaignScenario.CatalogService.Model.csproj" />
+    <ProjectReference Include="..\DfnxCampaignScenario.CatalogService.Provider\DfnxCampaignScenario.CatalogService.Provider.csproj" />
+  </ItemGroup>
+
+</Project>

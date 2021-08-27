@@ -2,4 +2,18 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/DfnxCampaignScenario
+/.vs
+/CampaignService/DfnxCampaignScenario.CampaignService.Adaptor/obj
+/CatalogService/DfnxCampaignScenario.CatalogService.EFBusiness/obj
+/CatalogService/DfnxCampaignScenario.CatalogService.Model/obj
+/CatalogService/DfnxCampaignScenario.CatalogService.Provider/obj
+/CatalogService/DfnxCampaignScenario.CatalogService.Services/obj
+/Core/DfnxCampaignScenario.Core/obj
+/Endpoint/DfnxCampaignScenario.Api/.config
+/Endpoint/DfnxCampaignScenario.Api/bin/Debug/net5.0
+/Endpoint/DfnxCampaignScenario.Api/obj
+/Provider/DfnxCampaignScenario.Provider/obj
+/CatalogService/DfnxCampaignScenario.CatalogService.Adaptor/obj
+/CampaignService/DfnxCampaignScenario.CampaignService.Services/obj
+/CampaignService/DfnxCampaignScenario.CampaignService.Provider/obj
+/CampaignService/DfnxCampaignScenario.CampaignService.Model/obj
