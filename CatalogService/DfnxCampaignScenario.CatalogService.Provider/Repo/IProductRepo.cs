@@ -13,5 +13,7 @@ namespace DfnxCampaignScenario.CatalogService.Provider.Repo
         public Task<List<Product>> GetAll();
         public Task NewProduct(Product product);
         public Task UpdateProduct(Product product);
+        public Task DeleteBySku(string sku);
+        public Task<Product> GetById(int id);
     }
 }

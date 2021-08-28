@@ -15,5 +15,6 @@ namespace DfnxCampaignScenario.CatalogService.Provider.Business
         public Task<BaseResponseModel<List<ProductResponseModel>>> GetAll();
         public Task<BaseResponseModel> NewProduct(ProductRequestModel product);
         public Task<BaseResponseModel> UpdateProduct(ProductRequestModel product);
+        public Task<BaseResponseModel> RemoveProduct(string sku);
     }
 }

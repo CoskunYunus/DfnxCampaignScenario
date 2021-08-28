@@ -9,15 +9,18 @@ using Microsoft.Extensions.Configuration;
 
 namespace DfnxCampaignScenario.CatalogService.EFBusiness.Context
 {
-   public class CatalogContext: DbContext, ICatalogContext
+    public class CatalogContext : DbContext, ICatalogContext
     {
         private IConfiguration _configuration;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connection = _configuration.GetSection("connectionString");
-            optionsBuilder.UseSqlServer(connection.Value);
+            //var connection = _configuration.GetSection("connectionString");
+            optionsBuilder.UseSqlServer("Server=localhost;Database=dfnx;Trusted_Connection=True;");
         }
         public DbSet<Product> Product { get; set; }
+        public DbSet<Basket> Basket { get; set; }
+        public DbSet<BasketItem> BasketItem { get; set; }
+        public int Save() => SaveChanges();
     }
 }

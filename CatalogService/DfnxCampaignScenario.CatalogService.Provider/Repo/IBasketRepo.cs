@@ -7,8 +7,10 @@ using DfnxCampaignScenario.CatalogService.Model.Entity;
 
 namespace DfnxCampaignScenario.CatalogService.Provider.Repo.Base
 {
-   public interface IBaseRepo
+    public interface IBasketRepo:IBaseRepo
     {
-
+        public Task<List<Basket>> GetAll();
+        public Task NewBasket(Basket basket);
+        public Task NewBasketItem(BasketItem basketItem);
     }
 }

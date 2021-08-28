@@ -11,6 +11,8 @@ namespace DfnxCampaignScenario.CatalogService.EFBusiness.Context
     public interface ICatalogContext
     {
         public DbSet<Product> Product { get; set; }
-
+        public DbSet<Basket> Basket { get; set; }
+        public DbSet<BasketItem> BasketItem { get; set; }
+        public int Save();
     }
 }

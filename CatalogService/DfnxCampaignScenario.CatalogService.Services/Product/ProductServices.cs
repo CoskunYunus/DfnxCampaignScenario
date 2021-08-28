@@ -55,7 +55,22 @@ namespace DfnxCampaignScenario.CatalogService.Services.Product
             /*
                  ....
              */
-            _productRepo.UpdateProduct(product.ToProduct());
+            var data = await _productRepo.GetById(product.Id);
+            _productRepo.UpdateProduct(product.ToProduct(data));
+
+            return new BaseResponseModel
+            {
+                Result = true,
+                StatusCodes = StatusCodes.Ok
+            };
+        }
+
+        public async Task<BaseResponseModel> RemoveProduct(string sku)
+        {
+            /*
+               ....
+           */
+            _productRepo.DeleteBySku(sku);
             return new BaseResponseModel
             {
                 Result = true,

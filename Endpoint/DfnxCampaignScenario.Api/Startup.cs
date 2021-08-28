@@ -14,6 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DfnxCampaignScenario.CatalogService.Provider.Business;
 using DfnxCampaignScenario.Provider.Register.CatalogServices;
 
 namespace DfnxCampaignScenario.Api
@@ -30,12 +31,14 @@ namespace DfnxCampaignScenario.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddMicrosoftIdentityWebApi(Configuration.GetSection("AzureAd"));
+            //services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            //    .AddMicrosoftIdentityWebApi(Configuration.GetSection("AzureAd"));
 
             services.AddControllers();
             new CatalogServiceRegister(services);
             new CatalogServiceRepoRegister(services);
+            
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "DfnxCampaignScenario.Api", Version = "v1" });

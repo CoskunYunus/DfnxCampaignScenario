@@ -15,6 +15,7 @@ namespace DfnxCampaignScenario.Provider.Register.CatalogServices
         public CatalogServiceRegister(IServiceCollection serviceCollection)
         {
             serviceCollection.AddScoped<IProductService, ProductServices>();
+            serviceCollection.AddScoped<IBasketServices, BasketServices>();
 
         }
 
