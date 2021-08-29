@@ -14,6 +14,7 @@ namespace DfnxCampaignScenario.CatalogService.Provider.Business
    public interface IBasketServices:IBaseService
     {
         public Task<BaseResponseModel<List<BasketResponseModel>>> GetAll();
+        public Task<BaseResponseModel<BasketResponseModel>> GetBasket(int id);
         public Task<BaseResponseModel> AddCart(BasketRequestModel basket);
 
     }

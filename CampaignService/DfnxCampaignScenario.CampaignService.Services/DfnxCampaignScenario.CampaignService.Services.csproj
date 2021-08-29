@@ -1,7 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\CatalogService\DfnxCampaignScenario.CatalogService.Model\DfnxCampaignScenario.CatalogService.Model.csproj" />
+    <ProjectReference Include="..\DfnxCampaignScenario.CampaignService.Model\DfnxCampaignScenario.CampaignService.Model.csproj" />
+    <ProjectReference Include="..\DfnxCampaignScenario.CampaignService.Provider\DfnxCampaignScenario.CampaignService.Provider.csproj" />
+  </ItemGroup>
 
 </Project>

@@ -16,6 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\CampaignService\DfnxCampaignScenario.CampaignService.Model\DfnxCampaignScenario.CampaignService.Model.csproj" />
+    <ProjectReference Include="..\..\CampaignService\DfnxCampaignScenario.CampaignService.Provider\DfnxCampaignScenario.CampaignService.Provider.csproj" />
     <ProjectReference Include="..\..\CatalogService\DfnxCampaignScenario.CatalogService.Provider\DfnxCampaignScenario.CatalogService.Provider.csproj" />
     <ProjectReference Include="..\..\Provider\DfnxCampaignScenario.Provider\DfnxCampaignScenario.Provider.csproj" />
   </ItemGroup>

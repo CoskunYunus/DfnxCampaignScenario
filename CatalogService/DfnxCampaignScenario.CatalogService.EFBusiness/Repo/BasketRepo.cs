@@ -38,5 +38,11 @@ namespace DfnxCampaignScenario.CatalogService.EFBusiness.Repo
             _catalogContext.Save();
             return Task.CompletedTask;
         }
+
+        public Task<Basket> GetById(int id)
+        {
+            var baskets = _catalogContext.Basket.Include("BasketItems").Include("BasketItems.Product").FirstOrDefault(c=> c.Id == id);
+            return Task.FromResult(baskets);
+        }
     }
 }

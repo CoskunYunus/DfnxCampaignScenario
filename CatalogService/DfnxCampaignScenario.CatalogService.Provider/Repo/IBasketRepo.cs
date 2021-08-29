@@ -12,5 +12,6 @@ namespace DfnxCampaignScenario.CatalogService.Provider.Repo.Base
         public Task<List<Basket>> GetAll();
         public Task NewBasket(Basket basket);
         public Task NewBasketItem(BasketItem basketItem);
+       public Task<Basket> GetById(int id);
     }
 }

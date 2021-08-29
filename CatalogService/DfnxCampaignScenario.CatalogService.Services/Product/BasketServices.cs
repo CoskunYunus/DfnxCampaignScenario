@@ -32,6 +32,17 @@ namespace DfnxCampaignScenario.CatalogService.Services.Product
             };
         }
 
+        public async Task<BaseResponseModel<BasketResponseModel>> GetBasket(int id)
+        {
+            var baskets = _basketRepo.GetById(id).Result.ToBasketResponseModel();
+            return new BaseResponseModel<BasketResponseModel>
+            {
+                Result = true,
+                Data = baskets,
+                StatusCodes = StatusCodes.Ok
+            };
+        }
+
         public async Task<BaseResponseModel> AddCart(BasketRequestModel basket)
         {
             var addBasket = basket.ToBasket();

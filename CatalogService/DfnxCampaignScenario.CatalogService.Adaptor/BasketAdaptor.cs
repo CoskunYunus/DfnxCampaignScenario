@@ -13,11 +13,15 @@ namespace DfnxCampaignScenario.CatalogService.Adaptor
     {
         public static List<BasketResponseModel> ToBasketResponseModel(this List<Basket> baskets)
         {
-            return baskets.Select(c => new BasketResponseModel
+            return baskets.Select(c => c.ToBasketResponseModel()).ToList();
+        }
+        public static BasketResponseModel ToBasketResponseModel(this Basket basket)
+        {
+            return new BasketResponseModel
             {
-                Id = c.Id,
-                MemberId = c.MemberId,
-                BasketItems = c.BasketItems?.Select(b => new BasketItemResponseModel
+                Id = basket.Id,
+                MemberId = basket.MemberId,
+                BasketItems = basket.BasketItems?.Select(b => new BasketItemResponseModel
                 {
                     Id = b.Id,
                     BasketId = b.BasketId,
@@ -26,7 +30,7 @@ namespace DfnxCampaignScenario.CatalogService.Adaptor
                     Quantity = b.Quantity
                 }).ToList()
 
-            }).ToList();
+            };
         }
 
         public static Basket ToBasket(this BasketRequestModel requestModel)
